@@ -49,5 +49,59 @@ export function form() {
             
         })
 
-    
+    btnTimer.addEventListener("click", () => {
+    sec0.classList.add("hidden")
+    sec2.classList.add("hidden")
+
+    sec3.innerHTML = `
+        <section class="flex items-center justify-center min-h-screen bg-gray-100">
+            <div class="bg-white w-[380px] rounded-3xl shadow-2xl p-8 text-center space-y-6">
+
+                <h2 class="text-2xl font-bold text-gray-800">
+                    Focus Timer
+                </h2>
+
+                <div id="time" class="text-6xl font-extrabold text-lime-700 tracking-widest">
+                    <p id="min">0</p>:<p id="suc">0</p>
+                </div>
+
+                <div class="flex justify-center gap-4 pt-4">
+                    <button id="start" class="px-6 py-3 bg-lime-700 text-white rounded-xl">
+                        Start
+                    </button>
+                    <button id="reset" class="px-6 py-3 bg-lime-700 text-white rounded-xl">
+                        reset
+                    </button>
+                </div>
+
+            </div>
+        </section>
+    `
+
+    sec3.classList.remove("hidden")
+
+    timer(); 
+});
+
+
+    function renderTasks() {
+        sec2.innerHTML = "";
+
+        tasks.forEach(elm => {
+            sec2.innerHTML += `
+                <div class="bg-white flex justify-between text-center shadow-md p-4 rounded-xl mt-4">
+                    <div>
+                        <h4 class="font-bold">${elm.title}</h4>
+                        <p>${elm.categorie}</p>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-clock"></i>
+                        <p>25 Min</p>
+                    </div>
+                </div>
+            `;
+        });
+
+
+    }
 }
