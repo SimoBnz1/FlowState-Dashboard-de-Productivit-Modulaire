@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header class=" flex justify-between ">
+        <div>
+            <i class="fa-solid fa-bars mx-5"></i> <span class="font-bold">Be Pro</span>
+        </div>
+            <i class="fa-solid fa-bell mr-5"></i>
+    </header>
+    <main>
+        <section id="sec0" class="" >
+           <div class="flex justify-between mt-6 ">
+             <p class="font-bold mx-5">Today Tasks</p>
+            <button class=" mr-5 bg-lime-800 rounded-md" id="add">
+                Ajouter Task
+            </button> 
+           </div>
+        </section>
+    </main>
+    <section id="sec1">
+
+    </section>
+    
+    <section id="sec2">
+
+    </section>
+    <section id="sec3">
+
+    </section>
+    <nav class="fixed bottom-0 w-full flex justify-around bg-white shadow-md py-2 rounded-xl " >
+            <button><i class="fa-solid fa-house"></i></button>
+            <button id="btnAff"><i class="fa-solid fa-book-open"></i></button>
+            <button id="timer" ><i class="fa-solid fa-alarm-clock"></i></button>
+            <button><i class="fa-solid fa-tree"></i></button>
+            <button><i class="fa-solid fa-user"></i></button>
+    </nav>
+
+    <script type="module">
+            import { add } from "./src/ui.js";
+            add()
+    </script>
+</body>
+
+</html>
